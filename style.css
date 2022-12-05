@@ -1,0 +1,62 @@
+* {
+    font-family: sans-serif;
+}
+h1 {
+    text-align: center;
+}
+.input {
+margin: auto;
+text-align: center;
+
+}
+.supprimer {
+    height: 30px;
+    width: 30px;
+}
+.editer{
+    height: 32px;
+    width: 32px;
+}
+.list {
+width: 40%;
+margin: 2em auto;
+border:  10px double black;
+align-items: center;
+justify-content: space-around;
+}
+
+p {
+ 
+    padding: 1em;
+    margin: auto;
+    text-align: center;
+}
+.produit{
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.produit:nth-child(even){
+    background-color: rgba(128, 128, 128, 0.27);
+}
+#ajouter {
+    padding: 0.5em;
+    border-radius: 1em;
+    border-color: rgba(0, 0, 0, 0.305);
+    cursor: pointer;
+}
+#ajouter:hover{
+    background-color: white;
+    transition: 0.3s;
+}
+.editer,.supprimer{
+    cursor: pointer;
+   
+}
+
+@media (max-width:768px) {
+    .list {
+        width: 90%;
+    }
+}
