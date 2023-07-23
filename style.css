@@ -1,62 +1,97 @@
 * {
-    font-family: sans-serif;
+  font-family: sans-serif;
 }
-h1 {
-    text-align: center;
-}
-.input {
-margin: auto;
-text-align: center;
 
+h1 {
+  text-align: center;
+  font-size: 36px;
 }
+
+.input {
+  margin: auto;
+  text-align: center;
+}
+
 .supprimer {
-    height: 30px;
-    width: 30px;
+  height: 30px;
+  width: 30px;
 }
-.editer{
-    height: 32px;
-    width: 32px;
+
+.editer {
+  height: 32px;
+  width: 32px;
 }
+
 .list {
-width: 40%;
-margin: 2em auto;
-border:  10px double black;
-align-items: center;
-justify-content: space-around;
+  width: 40%;
+  margin: 2em auto;
+  border: 2px solid #ddd;
+  background-color: #f9f9f9;
+  padding: 1em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 p {
- 
-    padding: 1em;
-    margin: auto;
-    text-align: center;
-}
-.produit{
-    padding: 1em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.produit:nth-child(even){
-    background-color: rgba(128, 128, 128, 0.27);
-}
-#ajouter {
-    padding: 0.5em;
-    border-radius: 1em;
-    border-color: rgba(0, 0, 0, 0.305);
-    cursor: pointer;
-}
-#ajouter:hover{
-    background-color: white;
-    transition: 0.3s;
-}
-.editer,.supprimer{
-    cursor: pointer;
-   
+  padding: 1em;
+  margin: auto;
+  text-align: center;
 }
 
-@media (max-width:768px) {
-    .list {
-        width: 90%;
-    }
+.produit {
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+.produit:nth-child(even) {
+  background-color: rgba(128, 128, 128, 0.27);
+}
+
+#ajouter {
+  padding: 0.5em 1em;
+  border-radius: 1em;
+  border: none;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+#ajouter:hover {
+  background-color: #0056b3;
+}
+
+.editer, .supprimer {
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.editer:hover, .supprimer:hover {
+  background-color: #f1f1f1;
+}
+
+@media (max-width: 768px) {
+  .list {
+    width: 90%;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Ajouter également une animation pour la suppression */
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
 }
